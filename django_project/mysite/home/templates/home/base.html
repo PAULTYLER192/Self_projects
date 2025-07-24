@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    {% block title %}MySite{% endblock %}
+  </title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'home/css/styles.css' %}">
+</head>
+
+<body>
+  <header>
+    <h1>MySite Header</h1>
+    <nav>
+      <!-- Navigation buttons in base template -->
+      <a href="/" class="button {% if request.path == '/' %}active{% endif %}">Home</a>
+      <a href="/about" class="button {% if request.path == '/about/' %}active{% endif %}">About</a>
+      <a href="/contact" class="button {% if request.path == '/contact/' %}active{% endif %}">Contact</a>
+    </nav>
+  </header>
+  
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+  
+  <footer>
+    &copy; 2025 Paul Tyler
+  </footer>
+</body>
+</html>
