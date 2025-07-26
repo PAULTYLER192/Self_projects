@@ -1,0 +1,23 @@
+# Django-specific
+*.pyc
+__pycache__/
+db.sqlite3
+/static/
+/media/
+*.log
+
+# Environment and dependencies
+.env
+venv/
+*.swp
+*.swo
+
+# IDE/editor files
+.vscode/
+.idea/
+*.bak
+*.tmp
+
+# OS-specific
+.DS_Store
+Thumbs.db
